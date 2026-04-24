@@ -7,7 +7,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-center gap-6 pt-12">
 
       <h1 className="mt-4 text-lg">words.ts</h1>
-      <Link href="/dash">Get started</Link>
+      <Link href="/dashboard">Get started</Link>
     </main>
   );
 }
