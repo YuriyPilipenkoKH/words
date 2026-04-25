@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
+    "@react-spectrum/s2": "^1.3.0",
     "axios": "^1.15.2",
     "clsx": "^2.1.1",
     "mongoose": "^9.5.0",

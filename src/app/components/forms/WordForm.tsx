@@ -31,13 +31,17 @@ const WordForm = () => {
       isSubmitting,
     } = formState
     const onSubmit = async (data: wordSchemaType) => {
+      console.log(data)
+       const formData = new FormData();
+      formData.append("name", data.text);
+      formData.append("email", data.meaning);
+      formData.append("password", data.spelling);
       try {
-        const res = await axios.post("/api/send-email", data);
-        console.log("Email sent:", res.data);
+       
       } catch (error) {
-        console.error("Failed to send email:", error);
+        console.error("Failed to submit word:", error);
       }
-      toast.success('email has been sent')
+      toast.success('success')
       reset();
     }
 
