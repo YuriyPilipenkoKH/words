@@ -25,7 +25,14 @@ export const createWord = async (formData: FormData) => {
         errors: parsed.error.flatten().fieldErrors,
       };
     }
+    const existing = await wordModel.findOne({ text: parsed.data.text });
 
+    if (existing) {
+      return {
+        success: false,
+        error: "Word already exists",
+      };
+}
     // Data is now fully typed & safe
     const word = await wordModel.create(parsed.data);
 
