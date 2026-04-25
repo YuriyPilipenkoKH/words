@@ -36,5 +36,6 @@ body {
   &:hover {
     background: #036055;
     color: #ffffff;
-  }
+    border-color: #036055;
+  };
 }
