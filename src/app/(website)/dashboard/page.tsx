@@ -7,7 +7,9 @@ import { Button } from "@/app/components/ui/button"
     <div className="p-4">  
       <div className="flex gap-2 items-center justify-end">
       dashboard
-      <Button>Press me</Button>
+      <Button 
+      variant="custom"
+      >Press me</Button>
       </div>
     </div>
   )
