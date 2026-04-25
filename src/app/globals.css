@@ -39,3 +39,9 @@ body {
     border-color: #036055;
   };
 }
+
+.logError {
+  color: rgb(193, 13, 13);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}

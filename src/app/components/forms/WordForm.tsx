@@ -60,19 +60,19 @@ const WordForm = () => {
            {...register('text',)}
           type='text' placeholder='word'
           disabled={isSubmitting}/>
-           {errors.text && <div className='text-accent'>{errors.text?.message}</div>}
+           {errors.text && <div className='logError'>{errors.text?.message}</div>}
 
           <Input
           {...register('meaning',)}
           type='meaning' placeholder='meaning'
           disabled={isSubmitting}/>
-           {errors.meaning && <div className='text-accent'>{errors.meaning?.message}</div>}
+           {errors.meaning && <div className='logError'>{errors.meaning?.message}</div>}
 
           <Input
           {...register('spelling',)}
            type='spelling' placeholder='spelling'
            disabled={isSubmitting}/>
-            {errors.spelling && <div className='text-accent'>{errors.spelling?.message}</div>}
+            {errors.spelling && <div className='logError'>{errors.spelling?.message}</div>}
 
       </div>
       <Button 
