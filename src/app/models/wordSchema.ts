@@ -1,5 +1,5 @@
 import { z } from "zod";
-// const forbiddenNames = process.env.NEXT_PUBLIC_FORBIDDEN_NAMES?.split(',') || [];
+
 
 export const wordSchema = z.object({
 
