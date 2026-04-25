@@ -9,7 +9,8 @@ import { Button } from "@/app/components/ui/button"
       dashboard
       <Button 
       variant="custom"
-      >Press me</Button>
+      >
+        Press me</Button>
       </div>
     </div>
   )

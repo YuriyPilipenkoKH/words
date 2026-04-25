@@ -1,6 +1,7 @@
 import { composeRenderProps } from 'react-aria-components/composeRenderProps';
 import { twMerge } from 'tailwind-merge';
 import { tv } from 'tailwind-variants';
+import { clsx, type ClassValue } from "clsx"
 
 export const focusRing = tv({
   base: 'outline outline-blue-600 dark:outline-blue-500 forced-colors:outline-[Highlight] outline-offset-2',
@@ -14,4 +15,9 @@ export const focusRing = tv({
 
 export function composeTailwindRenderProps<T>(className: string | ((v: T) => string) | undefined, tw: string): string | ((v: T) => string) {
   return composeRenderProps(className, (className) => twMerge(tw, className));
+}
+
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
 }
