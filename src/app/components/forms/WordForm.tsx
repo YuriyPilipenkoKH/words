@@ -7,6 +7,7 @@ import axios from 'axios'
 import toast from 'react-hot-toast'
 import { wordSchema, wordSchemaType } from '@/app/models/wordSchema'
 import { Input } from '../ui/Field'
+import { ImSpinner4 } from "react-icons/im";
 
 const WordForm = () => {
   const {
@@ -46,10 +47,9 @@ const WordForm = () => {
     autoComplete="off" 
     noValidate
      onSubmit={handleSubmit(onSubmit)}>
-      <h3 className='text-4xl text-accent '>
-        Let’s work together
+      <h3 className='text-2xl text-accent '>
+        Add new word
       </h3>
-      <p className='text-white/60'>fill the form</p>
       <div className='grid grid-cols-1  gap-6 '>
     
           <Input
@@ -70,15 +70,11 @@ const WordForm = () => {
            disabled={isSubmitting}/>
             {errors.spelling && <div className='text-accent'>{errors.spelling?.message}</div>}
 
-
-
-
-
       </div>
       <Button 
       isDisabled ={!isDirty || !isValid || isSubmitting}
       type='submit' variant={'custom'}>
-        {/* { isSubmitting &&  <LucideRefreshCw className='LuRefreshCw size-6 animate-spin' />}   */}
+        { isSubmitting &&  <ImSpinner4 className='LuRefreshCw size-6 animate-spin' />}  
         { isSubmitting  ? "Sending.." :  'Submit'}
       </Button>
     </form>

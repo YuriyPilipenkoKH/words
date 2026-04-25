@@ -1,4 +1,5 @@
 "use client"
+import WordForm from "@/app/components/forms/WordForm"
 import { Button } from "@/app/components/ui/button"
 
  function DashboardPage() {
@@ -10,8 +11,9 @@ import { Button } from "@/app/components/ui/button"
       <Button 
       variant="custom"
       >
-        Press me</Button>
+        Add word</Button>
       </div>
+      <WordForm/>
     </div>
   )
 }
